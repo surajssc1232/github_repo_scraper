@@ -28,8 +28,8 @@ This Spring Boot application lets you search for GitHub repositories, save the r
     ```
 2.  (Optional) Create a user and grant privileges:
     ```sql
-    CREATE USER github_user WITH PASSWORD 'your_password';
-    GRANT ALL PRIVILEGES ON DATABASE github_repo_searcher TO github_user;
+    CREATE USER your_user WITH PASSWORD 'your_password';
+    GRANT ALL PRIVILEGES ON DATABASE github_repo_searcher TO your_user;
     ```
 
 ### 2. Application Configuration
@@ -44,7 +44,7 @@ This Spring Boot application lets you search for GitHub repositories, save the r
 
     # Database Connection Details
     spring.datasource.url=jdbc:postgresql://localhost:5432/githubsearch
-    spring.datasource.username=suraj
+    spring.datasource.username= # replace with your user name
     spring.datasource.password= # Replace with your actual password
     spring.datasource.driver-class-name=org.postgresql.Driver
 
@@ -87,8 +87,8 @@ Instead of using `application-local.properties`, you can set your configurations
 
 ```bash
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/githubsearch
-export SPRING_DATASOURCE_USERNAME=suraj
-export SPRING_DATASOURCE_PASSWORD=suraj123
+export SPRING_DATASOURCE_USERNAME= # replace with the actual usernam
+export SPRING_DATASOURCE_PASSWORD= # replace with the actual password
 export GITHUB_API_TOKEN=your_actual_github_token_here
 ./gradlew bootRun
 ```
