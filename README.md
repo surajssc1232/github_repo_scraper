@@ -45,7 +45,7 @@ This Spring Boot application lets you search for GitHub repositories, save the r
     # Database Connection Details
     spring.datasource.url=jdbc:postgresql://localhost:5432/githubsearch
     spring.datasource.username=suraj
-    spring.datasource.password=suraj123
+    spring.datasource.password= # Replace with your actual password
     spring.datasource.driver-class-name=org.postgresql.Driver
 
     # JPA and Hibernate Settings
